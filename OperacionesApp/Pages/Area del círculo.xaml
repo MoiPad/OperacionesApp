@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OperacionesApp.Pages.Area_del_círculo"
+             xmlns:Models="clr-namespace:OperacionesApp.Models"
+             Title="Area del círculo"
+             BackgroundColor="White"      
+             >
+    <VerticalStackLayout>
+        <Label 
+            Padding="20"
+            Text="Calcular el area de un circulo!"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            TextColor="DarkBlue"
+           
+            />
+
+
+        <Label
+            Padding="20"
+            Text="Ingrese el radio del circulo: "
+            TextColor="DarkBlue"
+            FontSize="20"
+
+            />
+        <Entry
+            x:Name="txtRadio"
+            Margin="20"
+            TextColor="DarkBlue"
+            BackgroundColor="AntiqueWhite"
+            Keyboard="Numeric"
+            FontSize="20"
+            />
+        
+        <Entry
+            x:Name="txtResultado"
+            TextColor="DarkBlue"
+            BackgroundColor="AntiqueWhite"
+            Margin="20"
+            FontSize="20"
+            IsEnabled="False"
+            />
+        
+        <Button
+            Text="Calcular"
+            VerticalOptions="Center"
+            BackgroundColor="Green"
+            TextColor="White"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            Clicked="btnCalcular"
+            Margin="15"
+            />
+
+        <Button
+            Text="Limpiar"
+            VerticalOptions="Center"
+            Background="Black"
+            TextColor="white"
+            FontAttributes="Bold"
+            Clicked="btnLimpiar"
+            Margin="15"
+            FontSize="20"
+            />
+
+
+    </VerticalStackLayout>
+
+    <ContentPage.IconImageSource>
+        <FontImageSource
+                FontFamily="FaBrands"
+                Glyph="{x:Static Models:FaBrandsIconds.Circle}"
+                />
+    </ContentPage.IconImageSource>
+    
+</ContentPage>

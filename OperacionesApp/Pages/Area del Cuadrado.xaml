@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Models="clr-namespace:OperacionesApp.Models"
+             x:Class="OperacionesApp.Pages.Area_del_Cuadrado"
+             Title="Area del Cuadrado"
+             Background="White"
+             >
+    <VerticalStackLayout>
+        <Label 
+            Text="Calcular el area de un cuadrado"
+            TextColor="DarkBlue"
+            FontSize="Medium"
+            Padding="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Ingrese el lado: "
+            TextColor="DarkBlue"
+            Padding="20"
+            FontSize="20"
+            />
+        
+        <Entry
+            x:Name="txtLado"
+            BackgroundColor="AntiqueWhite"
+            Margin="20"
+            TextColor="DarkBlue"
+            FontSize="20"
+            Keyboard="Numeric"
+            />
+
+        <Entry
+            x:Name="txtResultado"
+            BackgroundColor="AntiqueWhite"
+            Margin="20"
+            FontSize="20"
+            IsEnabled="False"
+            />
+        
+        <Button
+            Text="Calcular"
+            TextColor="White"
+            Margin="20"
+            BackgroundColor="Green"
+            FontSize="20"
+            Clicked="txtCalcular"
+            />
+
+        <Button
+            Text="Limpiar"
+            TextColor="White"
+            Margin="20"
+            BackgroundColor="Black"
+            FontSize="20"
+            Clicked="txtLimpiar"
+            />
+    </VerticalStackLayout>
+
+    <ContentPage.IconImageSource>
+        <FontImageSource
+            FontFamily="FaBrands"
+            Glyph="{x:Static Models:FaBrandsIconds.SquareSymbol}"
+            />
+        </ContentPage.IconImageSource>
+
+   
+
+</ContentPage>
