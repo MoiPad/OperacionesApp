@@ -39,7 +39,39 @@
             />
         
         <Entry
-            
+            x:Name="txtAncho"
+            BackgroundColor="AntiqueWhite"  
+            Margin="20"
+            FontSize="20"
+            TextColor="DarkBlue"
+            Keyboard="Numeric"
+            />
+
+        <Entry
+            x:Name="txtResultado"
+            Background="AntiqueWhite"
+            Margin="20"
+            FontSize="20"
+            TextColor="Red"
+            IsEnabled="False"
+            />
+
+        <Button
+            Text="Calcular"
+            TextColor="White"
+            BackgroundColor="Green"
+            Margin="20"
+            FontSize="20"
+            Clicked="txtCalcular"
+            />
+
+        <Button
+            Text="Limpiar"
+            TextColor="White"
+            BackgroundColor="Black"
+            Margin="20"
+            FontSize="20"
+            Clicked="txtLimpiar"
             />
     </VerticalStackLayout>
 
