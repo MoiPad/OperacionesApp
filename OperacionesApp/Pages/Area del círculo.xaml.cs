@@ -9,12 +9,21 @@ public partial class Area_del_círculo : ContentPage
 
     private void btnCalcular(object sender, EventArgs e)
     {
-        Areas areas = new Areas();
+        try {
+            if (Validar())
+            {
+                Areas areas = new Areas();
 
-        areas.Radio = Double.Parse(txtRadio.Text);
+                areas.Radio = Double.Parse(txtRadio.Text);
 
-        double resultado = areas.AreaCirculo();
-        txtResultado.Text = resultado.ToString();
+                double resultado = areas.AreaCirculo();
+                txtResultado.Text = resultado.ToString();
+            }
+        
+        } catch (Exception) 
+        {
+            DisplayAlert("Advertencia!", "Se encontro un error al realizar el calculo", "Aceptar");
+        }    
     }
 
     private void  btnLimpiar(object sender, EventArgs e)
@@ -23,4 +32,18 @@ public partial class Area_del_círculo : ContentPage
         txtResultado.Text = "";
         txtRadio.Focus();   
     }
+
+    private bool Validar()
+    {
+        if (String.IsNullOrEmpty(txtRadio.Text))
+        {
+            DisplayAlert("Advertencia!", "Los campos no pueden ir en blanco o vacios", "Aceptar");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    
 }
