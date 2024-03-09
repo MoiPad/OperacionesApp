@@ -4,9 +4,10 @@
              xmlns:local ="clr-namespace:OperacionesApp.Pages"
              x:Class="OperacionesApp.MainPage"
             UnselectedTabColor="DarkGray"
-            BarBackgroundColor="#273c75"
+            BarBackgroundColor="#198754"
             BarTextColor="white"
             IconImageSource="20"
+            
              >
     
           <local:Area_del_círculo/>
