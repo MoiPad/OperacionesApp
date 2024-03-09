@@ -9,18 +9,18 @@ namespace OperacionesApp
         public double Radio { get; set; }
         public double Lado { get; set; }
 
-        public double Longitud {  get; set; }
+        public double Longitud { get; set; }
         public double Ancho { get; set; }
 
         public double AreaCirculo()
         {
-            Area = Math.PI * Math.Pow(Radio, 2) ;
+            Area = Math.PI * Math.Pow(Radio, 2);
             return Area;
         }
 
         public double AreaCuadrado()
         {
-            Area = Math.Pow(Lado, 2) ;
+            Area = Math.Pow(Lado, 2);
             return Area;
         }
 
@@ -29,5 +29,7 @@ namespace OperacionesApp
             Area = Longitud * Ancho;
             return Area;
         }
+        
+       
     }
 }
